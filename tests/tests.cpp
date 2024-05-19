@@ -28,16 +28,12 @@ TEST(HandlerTest, SetHandlerTest) {
 
 }
 
-TEST(HandlerTest, SetHandlerTest) {
+TEST(HandlerTest, HandleRequestTest) {
     MockHandler handler1, handler2;
     
-    
-    EXPECT_CALL(handler1, setHandler(&handler2)).Times(1);
 
     handler1.setHandler(&handler2);
-
-    
-    ASSERT_EQ(handler1.getSuccessor(), &handler2);
+    handler1.handleRequest();
 }
 
 
