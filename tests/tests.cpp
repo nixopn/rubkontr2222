@@ -10,6 +10,7 @@ public:
     MOCK_CONST_METHOD0(canhandle, bool());
     MOCK_METHOD1(setHandler, void(IHandler* handler));
     MOCK_CONST_METHOD0(handleRequest, void());
+
 };
 
 TEST(HandlerTest, CanHandleTest) {
@@ -29,10 +30,12 @@ TEST(HandlerTest, SetHandlerTest) {
 
 TEST(HandlerTest, HandleRequestTest) {
     MockHandler handler1, handler2;
-    EXPECT_CALL(handler1, setHandler(&handler2));
-    EXPECT_CALL(handler2, handleRequest());
+    
+    EXPECT_CALL(handler1, handleRequest()).Times(1);
+    EXPECT_CALL(handler2, handleRequest()).Times(1);
 
     handler1.setHandler(&handler2);
     handler1.handleRequest();
 }
+
 
