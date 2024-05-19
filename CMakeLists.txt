@@ -16,7 +16,7 @@ add_library(chain_of_responsibility STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/IHandler.h
 )
 
-target_include_directories(rubkontr2222 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(chain_of_responsibility PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(chain_of_responsibility gcov)
 
 if(BUILD_TESTS)
