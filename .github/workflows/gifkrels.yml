@@ -15,13 +15,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Configure Solver
+      - name: Configure 
         run: cmake ${{github.workspace}} -B ${{github.workspace}}/build -D PRINT_VERSION=${GITHUB_REF_NAME#v}
 
-      - name: Build Solver
+      - name: Build 
         run: cmake --build ${{github.workspace}}/build
 
-      - name: Build Package
+      - name: Build 
         run: cmake --build ${{github.workspace}}/build --target package
 
       - name: Build Source Package
