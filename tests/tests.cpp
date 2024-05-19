@@ -31,6 +31,7 @@ TEST(HandlerTest, SetHandlerTest) {
 TEST(HandlerTest, HandleRequestTest) {
     MockHandler handler1, handler2;
     
+    EXPECT_CALL(handler1, handleRequest()).Times(1);
 
     handler1.setHandler(&handler2);
     handler1.handleRequest();
