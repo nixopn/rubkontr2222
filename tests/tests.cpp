@@ -34,10 +34,6 @@ TEST(HandlerTest, HandleRequestTest) {
     EXPECT_CALL(handler1, handleRequest()).Times(1);
     EXPECT_CALL(handler2, handleRequest()).Times(1);
 
-    ON_CALL(handler1, setHandler(_)).WillByDefault([handler2](MockHandler* handler) {
-        handler2.handleRequest();
-    });
-
     handler1.setHandler(&handler2);
     handler1.handleRequest();
 }
