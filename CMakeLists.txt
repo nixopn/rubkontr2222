@@ -13,6 +13,7 @@ add_library(chain_of_responsibility STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/HandlerBase.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/ConcreteHandlerA.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/ConcreteHandlerB.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/IHandler.h
 )
 
 
