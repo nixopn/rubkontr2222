@@ -1,0 +1,2 @@
+/usr/bin/ar qc libchain_of_responsibility.a CMakeFiles/chain_of_responsibility.dir/HandlerBase.cpp.o CMakeFiles/chain_of_responsibility.dir/ConcreteHandlerA.cpp.o CMakeFiles/chain_of_responsibility.dir/ConcreteHandlerB.cpp.o
+/usr/bin/ranlib libchain_of_responsibility.a

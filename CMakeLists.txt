@@ -29,3 +29,24 @@ if(BUILD_TESTS)
 endif()
 
 include(CPack.cmake)
+
+set(SOURCES
+    ConcreteHandlerA.cpp
+    ConcreteHandlerB.cpp
+    HandlerBase.cpp
+    main.cpp
+)
+
+add_executable(chain_of_responsibilityaa ${SOURCES})
+
+target_include_directories(chain_of_responsibilityaa PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Добавление заголовочных файлов
+set(HEADERS
+    ConcreteHandlerA.h
+    ConcreteHandlerB.h
+    HandlerBase.h
+    IHandler.h
+)
+
+target_include_directories(chain_of_responsibilityaa PUBLIC ${HEADERS})
