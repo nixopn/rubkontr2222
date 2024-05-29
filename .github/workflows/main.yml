@@ -20,3 +20,9 @@ jobs:
       run: |
         cmake -H. -B_build -DCMAKE_C_COMPILER=gcc
         cmake --build _build
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: executable
+        path: build/GumballMachine
